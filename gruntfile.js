@@ -13,21 +13,21 @@ module.exports = function(grunt) {
       }
     },
 
-    imagemin: {
-      dynamic: {
-        files: [{
-          expand: true,
-          cwd: 'images/',
-          src: ['**/*.{png,jpg,gif}'],
-          dest: 'build/'
-        }]
+    autoprefixer: {
+      dist: {
+        options: {
+          map: true
+        },
+        files: {
+          'css/style.css': 'css/style.css'
+        }
       }
     },
 
     watch: {
       scripts: {
           files: ['sass/*.sass', 'css/*.css'],
-          tasks: ['sass'],
+          tasks: ['sass', 'autoprefixer'],
           options: {
               spawn: false,
           },
@@ -40,24 +40,36 @@ module.exports = function(grunt) {
         },
         options: {
             server: {
-                baseDir: ["sass/", "" "css/", "js/"]
+                baseDir: ["sass/", "", "css/", "js/"]
             },
             watchTask: true
         }
     },
 
+    imagemin: {
+      dynamic: {
+        files: [{
+          expand: true,
+          cwd: 'images/',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'build/'
+        }]
+      }
+    },
+
     jshint: {
-      all: ['js/*.js']
+      all: ['workspace/js/*.js']
     }
   });
   // Load the plugins tasks
   grunt.loadNpmTasks('grunt-sass');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
+  grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   // Default task(s).
 
-  grunt.registerTask('default', ['sass', 'imagemin', 'browserSync', 'watch']);
+  grunt.registerTask('default', ['sass', 'browserSync', 'watch', 'autoprefixer', 'imagemin']);
   grunt.registerTask('hint', ['jshint']);
 };
