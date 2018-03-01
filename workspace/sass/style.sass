@@ -1,0 +1,638 @@
+$mache-red: #ed145b
+$background-grey: #f4f4f4
+$white: #fff
+$text-grey: #5a5a5a
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700&subset=latin-ext')
+*
+	font-family: 'Lato', sans-serif
+html
+	font-size: 10px
+.recktangle
+	width: 203px
+	height: 2px
+	background-color: $mache-red
+	margin: 40px auto
+.main
+	background-color: $background-grey
+	background-image: url('../img/main-background.png')
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	height: 110vh
+.main-container
+	max-width: 1200px
+	margin: 0 auto
+	height: 90vh
+	display: grid
+	grid-template-columns: 1fr 3fr
+	grid-template-rows: 1fr 2fr 3fr
+	grid-gap: 10px
+	ul
+		padding: 0
+		margin: 0
+	li
+		display: inline-block
+		font-size: 1.6rem
+		font-weight: 700
+		padding: 8px
+		a
+			color: $white
+			text-decoration: none
+			transition: .3s ease-in-out
+			&:hover
+				color: $mache-red
+.logo
+	grid-column: 1/2
+	align-self: start
+	padding: 10px
+	margin: 25px
+.navigation
+	grid-column: 3/6
+	justify-self: end
+	align-self: start
+	margin: 30px
+.hero
+	grid-column: 1/6
+	grid-row: 2/4
+	justify-self: center
+	align-self: center
+	text-align: center
+	width: 80%
+	color: $white
+	h1
+		font-size: 4.6rem
+		text-transform: uppercase
+		font-weight: 300
+		letter-spacing: 2px
+		span
+			font-weight: 700
+	p
+		font-size: 2.2rem
+		font-weight: 300
+		line-height: 35px
+		letter-spacing: 0.55px
+.show-more
+	width: 203px
+	height: 53px
+	border-radius: 25px
+	background-color: $mache-red
+	border-style: none
+	color: $white
+	text-transform: uppercase
+	margin: 50px 0 20px 0
+	font-weight: 700
+	font-size: 1.5rem
+	letter-spacing: 0.38px
+	cursor: pointer
+	transition: .3s ease-in-out
+	&:hover
+		transform: scale(1.10)
+		box-shadow: 1px 1px 3px $white
+.about
+	padding-top: 100px
+	background-color: $background-grey
+	display: grid
+	grid-template-columns: 1fr 1.5fr 3fr
+.about-text
+	grid-column: 2/3
+	padding: 40px 0 0 10px
+	color: $text-grey
+	font-weight: 300
+	h3
+		font-size: 3.8rem
+		font-style: italic
+		letter-spacing: 0.95px
+		margin: 30px 10px 15px 0
+		line-height: 55px
+		font-weight: 300
+	.recktangle
+		margin: 30px 0
+	p
+		font-size: 1.7rem
+		letter-spacing: 0.38px
+		margin: 40px 0
+		line-height: 30px
+	a
+		color: $mache-red
+		text-decoration: none
+		text-transform: uppercase
+		font-size: 1.8rem
+		font-weight: 700
+		transition: .3s ease-in-out
+		&:hover
+			font-size: 2.2rem
+		.fa
+			font-size: 3.5rem
+			padding: 0 20px
+.our-services
+	max-width: 1200px
+	margin: 100px auto
+	display: grid
+	grid-template-columns: repeat(4, 1fr)
+	.service-text
+		grid-column: 1/5
+		justify-self: center
+		text-align: center
+		color: $text-grey
+		font-weight: 300
+		h3
+			font-size: 3.8rem
+			font-style: italic
+			letter-spacing: 0.95px
+			font-weight: 300
+		p
+			font-size: 1.7rem
+			letter-spacing: 0.7px
+			line-height: 30px
+			margin: 0 auto
+			margin-bottom: 90px
+			max-width: 60%
+	.each-col
+		justify-self: center
+		text-align: center
+		img
+			margin-bottom: 30px
+			transition: .3s ease-in-out
+			cursor: pointer
+			border-radius: 50%
+			&:hover
+				transform: scale(1.10)
+				box-shadow: 5px 5px 5px #ccc
+		h4
+			color: $mache-red
+			text-transform: uppercase
+			letter-spacing: 0.38px
+			font-size: 2rem
+			font-weight: 700
+.quotes
+	background-image: url('../img/quotes.png')
+	background-size: cover
+	background-position: center
+	display: grid
+	min-height: 550px
+	.carousel
+		align-self: center
+	.container
+		align-self: center
+		margin: 200px auto
+		max-height: 400px
+		p
+			color: $white
+			font-size: 2.5rem
+			font-style: italic
+			font-weight: 300
+.prizes
+	color: $text-grey
+	text-align: center
+	background-color: $background-grey
+.prizes-container
+	max-width: 1200px
+	margin: 0 auto
+	display: grid
+	grid-template-columns: repeat(4, 1fr)
+	grid-column-gap: 30px
+	padding-bottom: 150px
+.prizes-text
+	grid-column: 1/5
+	font-weight: 300
+	h3
+		font-style: italic
+		font-size: 3.8rem
+		font-weight: 300
+		letter-spacing: 0.95px
+		margin: 150px 0 0 0
+	p
+		font-size: 1.7rem
+		line-height: 30px
+		letter-spacing: 0.38px
+		margin: 0 auto
+		margin-bottom: 90px
+		max-width: 70%
+.box-top
+	background-color: $text-grey
+	color: $background-grey
+	h4
+		font-size: 2rem
+		font-weight: 700
+		line-height: 38px
+		letter-spacing: 0.5px
+		padding: 35px 0 0 0
+		margin-bottom: 0
+		span
+			font-size: 5rem
+			letter-spacing: 1.25px
+	p
+		font-size: 1.6rem
+		margin: -5px 0 0
+		padding-bottom: 55px
+.prize-col
+	position: relative
+	.box-top
+		transition: .3s ease-in-out
+.prize-col:hover .box-top
+	background-color: $mache-red
+.service-type
+	position: absolute
+	left: 0
+	right: 0
+	top: 105px
+	margin: 25px
+	background-color: $background-grey
+	color: $text-grey
+	font-size: 1.7rem
+	font-weight: 700
+	text-transform: uppercase
+	letter-spacing: 0.38px
+	padding: 18px 60px
+	border-radius: 40px
+.box-bottom
+	background-color: $white
+	font-size: 1.5rem
+	font-weight: 300
+	ul
+		padding: 60px 0 25px 0
+		list-style-type: none
+		li
+			padding: 10px
+	button
+		text-transform: uppercase
+		background-color: $mache-red
+		border-style: none
+		color: $white
+		font-size: 1.5rem
+		font-weight: 700
+		border-radius: 60px
+		padding: 16px 62px
+		margin-bottom: 32px
+		cursor: pointer
+		transition: .3s ease-in-out
+		&:hover
+			transform: scale(1.10)
+.additional-info
+	.container
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		grid-column-gap: 30px
+		grid-row-gap: 80px
+		margin: 100px auto
+.each-box
+	display: grid
+	grid-template-columns: 60px 1fr
+	grid-template-rows: 25px
+	grid-gap: 10px
+	h5
+		font-size: 1.5rem
+		font-weight: 700
+		text-transform: uppercase
+		color: $mache-red
+		padding-left: 10px
+	p
+		grid-column: 2
+		font-size: 1.5rem
+		font-weight: 300
+		color: $text-grey
+		padding-left: 10px
+		line-height: 28px
+.join-us
+	background-color: $mache-red
+	padding: 70px 0
+.join-us-container
+	max-width: 1200px
+	margin: 0 auto
+	display: grid
+	grid-template-columns: 3fr 1fr
+.text
+	h1
+		font-size: 3.8rem
+		font-weight: 300
+		text-transform: uppercase
+		color: $white
+		letter-spacing: 0.7px
+		display: inline-block
+		span
+			font-weight: 700
+.button
+	justify-self: center
+	button
+		font-size: 1.5rem
+		font-weight: 700
+		color: $mache-red
+		background-color: $white
+		padding: 16px 62px
+		text-transform: uppercase
+		border-radius: 60px
+		border-style: none
+		cursor: pointer
+		transition: .3s ease-in-out
+		&:hover
+			transform: scale(1.10)
+.news-text
+	grid-column: 1/4
+	justify-self: center
+	text-align: center
+	width: 75%
+	color: $text-grey
+	font-weight: 300
+	h3
+		font-style: italic
+		font-size: 3.8rem
+		font-weight: 300
+		letter-spacing: 0.95px
+	p
+		font-size: 1.7rem
+		line-height: 30px
+		letter-spacing: 0.38px
+		margin-bottom: 60px
+.news
+	max-width: 1200px
+	margin: 0 auto
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-gap: 30px
+	padding: 100px 20px 80px 20px
+	.news-img
+		background-position: center
+		background-size: cover
+		height: 250px
+		position: relative
+		overflow: hidden
+		display: flex
+		justify-content: center
+		align-items: center
+	.img1
+		background-image: url('../img/news1.png')
+	.img2
+		background-image: url('../img/news2.png')
+	.img3
+		background-image: url('../img/news3.png')
+	.img4
+		background-image: url('../img/news4.png')
+	.img5
+		background-image: url('../img/news5.png')
+	.img6
+		background-image: url('../img/news6.png')
+	.news-item
+		background-color: $background-grey
+		color: $text-grey
+		font-size: 1.6rem
+		h5
+			font-size: 1.6rem
+			letter-spacing: 0.4px
+			text-transform: uppercase
+			font-weight: 700
+			margin: 20px 15px 15px 15px
+		p
+			font-weight: 300
+			line-height: 32px
+			margin: 0 15px 35px 15px
+		.layer
+			background-color: $mache-red
+			height: 350px
+			position: absolute
+			width: 300%
+			top: 250px
+			left: -30px
+			transition: .3s ease-in-out
+			transform: rotate(2deg)
+	i
+		color: #000
+		opacity: 0
+		transition: .3s ease-in-out
+		transition-delay: .2s
+		cursor: pointer
+	.news-item:hover i 
+		opacity: 0.8
+	.news-item:hover .layer
+		opacity: 0.8
+		top: 0px
+	.more
+		grid-column: 1/4
+		justify-self: center
+		margin-top: 50px
+		cursor: pointer
+.additional-info-2
+	background-image: url('../img/info2-background.png')
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	padding: 120px
+	color: $white
+	font-weight: 300
+	display: grid
+	justify-self: center
+	text-align: center
+	h2
+		font-size: 3.8rem
+		font-style: italic
+		font-weight: 300
+		letter-spacing: 0.8px
+		line-height: 50px
+	p
+		font-size: 1.7rem
+		line-height: 32px
+		letter-spacing: 0.38px
+		width: 80%
+		margin: 0 auto
+	.show-more
+		margin-bottom: 0
+.download
+	background-color: $background-grey
+	padding: 100px 0 170px 0
+	.container
+		display: grid
+		grid-template-columns: 1fr 450px
+		grid-column-gap: 30px
+	.safari-browser
+		position: relative
+		img
+			position: absolute
+			right: 0
+			margin-right: 35px
+	.download-text
+		color: $text-grey
+		font-weight: 300
+		h2
+			font-size: 3.8rem
+			font-style: italic
+			font-weight: 300
+			letter-spacing: 0.95px
+			padding-top: 60px
+		p
+			font-size: 1.7rem
+			line-height: 30px
+			margin-bottom: 50px
+	.recktangle
+		margin: 30px 0
+	button
+		font-size: 1.5rem
+		font-weight: 700
+		color: $white
+		background-color: $mache-red
+		padding: 16px 35px
+		text-transform: uppercase
+		border-radius: 60px
+		border-style: none
+		cursor: pointer
+		transition: .3s ease-in-out
+		&:hover
+			transform: scale(1.10)
+footer
+	background-color: #2B2B2B
+	color: $white
+	padding: 50px 0
+	.container
+		display: grid
+		grid-template-columns: 1fr 1fr 2fr
+		grid-column-gap: 20px
+	p
+		font-size: 1.4rem
+		text-transform: uppercase
+		letter-spacing: 0.2px
+		align-self: center
+		justify-self: end
+		margin: 0
+		line-height: 45px
+		.bold
+			font-weight: 700
+		.red-dot
+			color: #d80d0d
+			font-weight: 700
+/* Media Queries  */
+@media (max-width: 767px)
+	.main
+		height: initial
+		padding-bottom: 100px
+		.main-container
+			grid-template-columns: 1fr
+			grid-template-rows: auto
+			height: initial
+			.logo
+				grid-column: 1
+				justify-self: center
+			.navigation
+				grid-column: 1
+				justify-self: center
+				li
+					display: block
+			.hero
+				grid-column: 1
+				grid-row: auto
+	.about
+		padding: 0 35px
+		img
+			display: none
+		.about-text
+			grid-column: 1/5
+			padding-bottom: 80px
+	.our-services
+		grid-template-columns: 1fr
+		.service-text
+			grid-column: 1
+		.each-col
+			margin-bottom: 30px
+	.prizes
+		padding-left: 30px
+		padding-right: 30px
+	.prizes-container
+		grid-template-columns: 1fr
+		grid-row-gap: 30px
+		.prizes-text
+			grid-column: 1
+	.additional-info
+		.container
+			grid-template-columns: 1fr
+	.join-us-container
+		grid-template-columns: 1fr
+		.text
+			text-align: center
+			margin: 0 40px
+			line-height: 70px
+	.news
+		grid-template-columns: 1fr
+		.news-text
+			grid-column: 1
+		.more
+			grid-column: 1
+	.additional-info-2
+		padding: 120px 0
+		p
+			width: 100%
+	.download
+		padding-bottom: 100px
+		img
+			display: none
+		.container
+			grid-template-columns: 1fr
+		.download-btn
+			max-width: 210px
+			margin: 0 auto
+	footer
+		.container
+			grid-template-columns: 1fr
+			grid-gap: 30px
+		p
+			justify-self: center
+			text-align: center
+@media (min-width: 768px) and (max-width: 1199px)
+	.about
+		padding: 0 35px
+		img
+			display: none
+		.about-text
+			grid-column: 1/5
+			padding-bottom: 80px
+	.our-services
+		grid-template-columns: repeat(2, 1fr)
+		.service-text
+			grid-column: 1/3
+		.each-col
+			margin-bottom: 30px
+	.quotes
+		.carousel-control-prev
+			margin-left: -30px
+		.carousel-control-next
+			margin-right: -30px
+	.prizes
+		padding-left: 30px
+		padding-right: 30px
+	.prizes-container
+		grid-template-columns: repeat(2, 1fr)
+		grid-row-gap: 30px
+		.prizes-text
+			grid-column: 1/3
+	.additional-info
+		.container
+			grid-template-columns: repeat(2, 1fr)
+	.join-us-container
+		grid-template-columns: 1fr
+		.text
+			text-align: center
+			margin: 0 40px
+			line-height: 70px
+	.news
+		grid-template-columns: 1fr 1fr
+		.news-text
+			grid-column: 1/3
+		.more
+			grid-column: 1/3
+	.additional-info-2
+		padding: 120px 0
+		p
+			width: 100%
+	.download
+		padding-bottom: 100px
+		img
+			display: none
+		.container
+			grid-template-columns: 1fr
+		.download-btn
+			max-width: 210px
+			margin: 0 auto
+	footer
+		.container
+			grid-template-columns: repeat(2, 1fr)
+			grid-gap: 30px
+		p
+			justify-self: center
+		.adapt
+			grid-column: 1/3
