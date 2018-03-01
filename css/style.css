@@ -44,21 +44,24 @@ html {
 
 .logo {
   grid-column: 1/2;
-  align-self: start;
+  -ms-flex-item-align: start;
+      align-self: start;
   padding: 10px;
   margin: 25px; }
 
 .navigation {
   grid-column: 3/6;
   justify-self: end;
-  align-self: start;
+  -ms-flex-item-align: start;
+      align-self: start;
   margin: 30px; }
 
 .hero {
   grid-column: 1/6;
   grid-row: 2/4;
   justify-self: center;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   text-align: center;
   width: 80%;
   color: #fff; }
@@ -90,7 +93,8 @@ html {
   cursor: pointer;
   transition: .3s ease-in-out; }
   .show-more:hover {
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
     box-shadow: 1px 1px 3px #fff; }
 
 .about {
@@ -163,7 +167,8 @@ html {
       cursor: pointer;
       border-radius: 50%; }
       .our-services .each-col img:hover {
-        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
         box-shadow: 5px 5px 5px #ccc; }
     .our-services .each-col h4 {
       color: #ed145b;
@@ -179,9 +184,11 @@ html {
   display: grid;
   min-height: 550px; }
   .quotes .carousel {
-    align-self: center; }
+    -ms-flex-item-align: center;
+        align-self: center; }
   .quotes .container {
-    align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
     margin: 200px auto;
     max-height: 400px; }
     .quotes .container p {
@@ -283,7 +290,8 @@ html {
     cursor: pointer;
     transition: .3s ease-in-out; }
     .box-bottom button:hover {
-      transform: scale(1.1); }
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
 
 .additional-info .container {
   display: grid;
@@ -345,7 +353,8 @@ html {
     cursor: pointer;
     transition: .3s ease-in-out; }
     .button button:hover {
-      transform: scale(1.1); }
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
 
 .news-text {
   grid-column: 1/4;
@@ -378,9 +387,15 @@ html {
     height: 250px;
     position: relative;
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center; }
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .news .img1 {
     background-image: url("../img/news1.png"); }
   .news .img2 {
@@ -415,7 +430,8 @@ html {
       top: 250px;
       left: -30px;
       transition: .3s ease-in-out;
-      transform: rotate(2deg); }
+      -webkit-transform: rotate(2deg);
+              transform: rotate(2deg); }
   .news i {
     color: #000;
     opacity: 0;
@@ -499,7 +515,8 @@ html {
     cursor: pointer;
     transition: .3s ease-in-out; }
     .download button:hover {
-      transform: scale(1.1); }
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
 
 footer {
   background-color: #2B2B2B;
@@ -513,7 +530,8 @@ footer {
     font-size: 1.4rem;
     text-transform: uppercase;
     letter-spacing: 0.2px;
-    align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
     justify-self: end;
     margin: 0;
     line-height: 45px; }
@@ -658,5 +676,4 @@ footer {
     justify-self: center; }
   footer .adapt {
     grid-column: 1/3; } }
-
 /*# sourceMappingURL=style.css.map */
